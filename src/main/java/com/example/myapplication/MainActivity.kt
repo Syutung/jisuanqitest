@@ -84,8 +84,6 @@ class MainActivity : AppCompatActivity() {
                 gongshi.text = input.text.toString()+"+"
                 input.text=""
             }
-
-
         }
 
         numberxJIAN.setOnClickListener {
