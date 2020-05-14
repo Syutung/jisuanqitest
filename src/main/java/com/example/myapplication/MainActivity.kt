@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
             val intant = Intent(this,About::class.java)
             startActivity(intant)
         }
+        more.setOnClickListener {
+            val intant = Intent(this,More::class.java)
+            startActivity(intant)
+        }
         number0.setOnClickListener {
             input.text=input.text.toString()+"0"
 
@@ -183,7 +187,8 @@ class MainActivity : AppCompatActivity() {
                     if (char1 == '.' || have_xiaoshudian == true) {
                         have_xiaoshudian = false
                     }
-                    input.text = m.replace(char1.toString(), "")
+
+                    input.text = m.substring(0,m.length-1)
                 }
 
 

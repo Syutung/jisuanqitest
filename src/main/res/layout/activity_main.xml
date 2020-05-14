@@ -256,21 +256,21 @@
 
     <TextView
         android:id="@+id/input"
-        android:layout_width="357dp"
-        android:layout_height="59dp"
+        android:layout_width="377dp"
+        android:layout_height="113dp"
         android:gravity="right"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gongshi"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/gongshi"
-        android:layout_width="340dp"
-        android:layout_height="65dp"
+        android:layout_width="371dp"
+        android:layout_height="115dp"
         android:gravity="right"
         android:textAllCaps="false"
         android:textSize="36sp"
@@ -279,10 +279,10 @@
         android:verticalScrollbarPosition="defaultPosition"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintVertical_bias="0.132" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -295,5 +295,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/aboutme_foreground" />
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="51dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/kuozhan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
