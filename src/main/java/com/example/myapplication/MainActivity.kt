@@ -63,130 +63,143 @@ class MainActivity : AppCompatActivity() {
             input.text=input.text.toString()+"9"
         }
         numberxJIA.setOnClickListener {
-            if (have_xiaoshudian==true){
-                if (numxiao1==0.0){
-                    numxiao1 = input.text.toString().toDouble()
-                }
-                else if (numxiao1!=0.0){
-                    numxiao2 = input.text.toString().toDouble()
-                }
+            if(input.text.toString()==""){
+
             }
-            else{
-                if (numxiao1==0.0){
-                    numxiao1 = input.text.toString().toDouble()
+            else {
+                if (have_xiaoshudian == true) {
+                    if (numxiao1 == 0.0) {
+                        numxiao1 = input.text.toString().toDouble()
+                    } else if (numxiao1 != 0.0) {
+                        numxiao2 = input.text.toString().toDouble()
+                    }
+                } else {
+                    if (numxiao1 == 0.0) {
+                        numxiao1 = input.text.toString().toDouble()
+                    } else if (numxiao1 != 0.0) {
+                        numxiao2 = input.text.toString().toDouble()
+                    }
                 }
-                else if (numxiao1!=0.0){
-                    numxiao2 = input.text.toString().toDouble()
-                }
+                fuhao = "+"
+                gongshi.text = input.text.toString()+"+"
+                input.text=""
             }
 
 
-            fuhao = "+"
-            gongshi.text = input.text.toString()+"+"
-            input.text=""
 
         }
 
         numberxJIAN.setOnClickListener {
-            if (have_xiaoshudian==true){
-                if (numxiao1==0.0){
-                    numxiao1 = input.text.toString().toDouble()
-                }
-                else if (numxiao1!=0.0){
-                    numxiao2 = input.text.toString().toDouble()
-                }
-            }
-            else{
-                if (numxiao1==0.0){
-                    numxiao1 = input.text.toString().toDouble()
-                }
-                else if (numxiao1!=0.0){
-                    numxiao2 = input.text.toString().toDouble()
-                }
-            }
+            if (input.text.toString() == "") {
 
-            fuhao = "-"
-            gongshi.text = input.text.toString()+"-"
-            input.text=""
+            } else {
+                if (have_xiaoshudian == true) {
+                    if (numxiao1 == 0.0) {
+                        numxiao1 = input.text.toString().toDouble()
+                    } else if (numxiao1 != 0.0) {
+                        numxiao2 = input.text.toString().toDouble()
+                    }
+                } else {
+                    if (numxiao1 == 0.0) {
+                        numxiao1 = input.text.toString().toDouble()
+                    } else if (numxiao1 != 0.0) {
+                        numxiao2 = input.text.toString().toDouble()
+                    }
 
+                }
+
+                fuhao = "-"
+                gongshi.text = input.text.toString() + "-"
+                input.text = ""
+
+            }
         }
         numberx.setOnClickListener {
-            if (have_xiaoshudian==true){
-                if (numxiao1==0.0){
-                    numxiao1 = input.text.toString().toDouble()
+            if (input.text.toString() == "") {
+
+            } else {
+                if (have_xiaoshudian == true) {
+                    if (numxiao1 == 0.0) {
+                        numxiao1 = input.text.toString().toDouble()
+                    } else if (numxiao1 != 0.0) {
+                        numxiao2 = input.text.toString().toDouble()
+                    }
+                } else {
+                    if (numxiao1 == 0.0) {
+                        numxiao1 = input.text.toString().toDouble()
+                    } else if (numxiao1 != 0.0) {
+                        numxiao2 = input.text.toString().toDouble()
+                    }
                 }
-                else if (numxiao1!=0.0){
-                    numxiao2 = input.text.toString().toDouble()
-                }
+
+                fuhao = "×"
+
+                gongshi.text = input.text.toString() + "×"
+                input.text = ""
+
             }
-            else{
-                if (numxiao1==0.0){
-                    numxiao1 = input.text.toString().toDouble()
-                }
-                else if (numxiao1!=0.0){
-                    numxiao2 = input.text.toString().toDouble()
-                }
-            }
-
-            fuhao = "×"
-
-            gongshi.text = input.text.toString()+"×"
-            input.text=""
-
         }
 
         numberxchu.setOnClickListener {
-            if (have_xiaoshudian==true){
-                if (numxiao1==0.0){
-                    numxiao1 = input.text.toString().toDouble()
+            if (input.text.toString() == "") {
+
+            } else {
+                if (have_xiaoshudian == true) {
+                    if (numxiao1 == 0.0) {
+                        numxiao1 = input.text.toString().toDouble()
+                    } else if (numxiao1 != 0.0) {
+                        numxiao2 = input.text.toString().toDouble()
+                    }
+                } else {
+                    if (numxiao1 == 0.0) {
+                        numxiao1 = input.text.toString().toDouble()
+                    } else if (numxiao1 != 0.0) {
+                        numxiao2 = input.text.toString().toDouble()
+                    }
                 }
-                else if (numxiao1!=0.0){
-                    numxiao2 = input.text.toString().toDouble()
-                }
+
+                fuhao = "÷"
+
+                gongshi.text = input.text.toString() + "÷"
+                input.text = ""
+
             }
-            else{
-                if (numxiao1==0.0){
-                    numxiao1 = input.text.toString().toDouble()
-                }
-                else if (numxiao1!=0.0){
-                    numxiao2 = input.text.toString().toDouble()
-                }
-            }
-
-            fuhao = "÷"
-
-            gongshi.text = input.text.toString()+"÷"
-            input.text=""
-
         }
-
         numberbaifen.setOnClickListener {
-            input.text = ((input.text.toString().toDouble())/100).toString()
-            have_xiaoshudian=true
+            if (input.text.toString() == "") {
 
+            } else {
+                input.text = ((input.text.toString().toDouble()) / 100).toString()
+                have_xiaoshudian = true
+
+            }
         }
         numberc.setOnClickListener {
-            if (input.text.toString()==""){
+            if (input.text.toString() == "") {
 
-            }
-            else{
-                var m=input.text.toString()
-                val char1 = m.last()
-                if (char1=='.' || have_xiaoshudian==true){
-                    have_xiaoshudian=false
+            } else {
+                if (input.text.toString() == "") {
+
+                } else {
+                    var m = input.text.toString()
+                    val char1 = m.last()
+                    if (char1 == '.' || have_xiaoshudian == true) {
+                        have_xiaoshudian = false
+                    }
+                    input.text = m.replace(char1.toString(), "")
                 }
-                input.text=m.replace(char1.toString(),"")
+
+
             }
-
-
-
-
         }
         numberdian.setOnClickListener {
-            input.text=input.text.toString()+"."
-            have_xiaoshudian=true
-        }
+            if (input.text.toString() == "") {
 
+            } else {
+                input.text = input.text.toString() + "."
+                have_xiaoshudian = true
+            }
+        }
         numberdel.setOnClickListener {
             input.text=""
             gongshi.text=""
@@ -196,113 +209,98 @@ class MainActivity : AppCompatActivity() {
         }
 
         numberxdeng.setOnClickListener {
-            val t = input.text.toString()
-            gongshi.text = gongshi.text.toString()+t
+            if (input.text.toString() == "") {
 
-            if (fuhao=="+"){
-                if (have_xiaoshudian==true){
-                    if (numxiao1==0.0){
-                        numxiao1 = input.text.toString().toDouble()
-                    }
-                    else if (numxiao1!=0.0){
-                        numxiao2 = input.text.toString().toDouble()
-                    }
-                }
-                else{
-                    if (numxiao1==0.0){
-                        numxiao1 = input.text.toString().toDouble()
-                    }
-                    else if (numxiao1!=0.0){
-                        numxiao2 = input.text.toString().toDouble()
-                    }
-                }
-                if (have_xiaoshudian==true){
+            }
+            else {
+                val t = input.text.toString()
+                gongshi.text = gongshi.text.toString() + t
 
-                    input.text=(numxiao1+numxiao2).toString()
-                }
-                else{
-                    input.text=(numxiao1+numxiao2).toInt().toString()
-                }
-            }
-            else if (fuhao=="-"){
-                if (have_xiaoshudian==true){
-                    if (numxiao1==0.0){
-                        numxiao1 = input.text.toString().toDouble()
+                if (fuhao == "+") {
+                    if (have_xiaoshudian == true) {
+                        if (numxiao1 == 0.0) {
+                            numxiao1 = input.text.toString().toDouble()
+                        } else if (numxiao1 != 0.0) {
+                            numxiao2 = input.text.toString().toDouble()
+                        }
+                    } else {
+                        if (numxiao1 == 0.0) {
+                            numxiao1 = input.text.toString().toDouble()
+                        } else if (numxiao1 != 0.0) {
+                            numxiao2 = input.text.toString().toDouble()
+                        }
                     }
-                    else if (numxiao1!=0.0){
-                        numxiao2 = input.text.toString().toDouble()
-                    }
-                }
-                else{
-                    if (numxiao1==0.0){
-                        numxiao1 = input.text.toString().toDouble()
-                    }
-                    else if (numxiao1!=0.0){
-                        numxiao2 = input.text.toString().toDouble()
-                    }
-                }
-                if (have_xiaoshudian==true){
-                    input.text=(numxiao1-numxiao2).toString()
-                }
-                else{
-                    input.text=(numxiao1-numxiao2).toInt().toString()                }
-            }
-            else if (fuhao=="×"){
-                if (have_xiaoshudian==true){
-                    if (numxiao1==0.0){
-                        numxiao1 = input.text.toString().toDouble()
-                    }
-                    else if (numxiao1!=0.0){
-                        numxiao2 = input.text.toString().toDouble()
-                    }
-                }
-                else{
-                    if (numxiao1==0.0){
-                        numxiao1 = input.text.toString().toDouble()
-                    }
-                    else if (numxiao1!=0.0){
-                        numxiao2 = input.text.toString().toDouble()
-                    }
-                }
-                if (have_xiaoshudian==true){
-                    input.text=(numxiao1*numxiao2).toString()
-                }
-                else{
-                    input.text=(numxiao1*numxiao2).toInt().toString()
-                }
-            }
-            else{
-                if (have_xiaoshudian==true){
-                    if (numxiao1==0.0){
-                        numxiao1 = input.text.toString().toDouble()
-                    }
-                    else if (numxiao1!=0.0){
-                        numxiao2 = input.text.toString().toDouble()
-                    }
-                }
-                else{
-                    if (numxiao1==0.0){
-                        numxiao1 = input.text.toString().toDouble()
-                    }
-                    else if (numxiao1!=0.0){
-                        numxiao2 = input.text.toString().toDouble()
-                    }
-                }
-                if (have_xiaoshudian==true){
-                    input.text=(numxiao1/numxiao2).toString()
-                }
-                else{
-                    input.text=(numxiao1/numxiao2).toString()
-                }
-            }
+                    if (have_xiaoshudian == true) {
 
-            if (have_xiaoshudian==true){
-                numxiao1=input.text.toString().toDouble()
-            }
-            else
-            {
-                numxiao1=input.text.toString().toDouble()
+                        input.text = (numxiao1 + numxiao2).toString()
+                    } else {
+                        input.text = (numxiao1 + numxiao2).toInt().toString()
+                    }
+                } else if (fuhao == "-") {
+                    if (have_xiaoshudian == true) {
+                        if (numxiao1 == 0.0) {
+                            numxiao1 = input.text.toString().toDouble()
+                        } else if (numxiao1 != 0.0) {
+                            numxiao2 = input.text.toString().toDouble()
+                        }
+                    } else {
+                        if (numxiao1 == 0.0) {
+                            numxiao1 = input.text.toString().toDouble()
+                        } else if (numxiao1 != 0.0) {
+                            numxiao2 = input.text.toString().toDouble()
+                        }
+                    }
+                    if (have_xiaoshudian == true) {
+                        input.text = (numxiao1 - numxiao2).toString()
+                    } else {
+                        input.text = (numxiao1 - numxiao2).toInt().toString()
+                    }
+                } else if (fuhao == "×") {
+                    if (have_xiaoshudian == true) {
+                        if (numxiao1 == 0.0) {
+                            numxiao1 = input.text.toString().toDouble()
+                        } else if (numxiao1 != 0.0) {
+                            numxiao2 = input.text.toString().toDouble()
+                        }
+                    } else {
+                        if (numxiao1 == 0.0) {
+                            numxiao1 = input.text.toString().toDouble()
+                        } else if (numxiao1 != 0.0) {
+                            numxiao2 = input.text.toString().toDouble()
+                        }
+                    }
+                    if (have_xiaoshudian == true) {
+                        input.text = (numxiao1 * numxiao2).toString()
+                    } else {
+                        input.text = (numxiao1 * numxiao2).toInt().toString()
+                    }
+                } else {
+                    if (have_xiaoshudian == true) {
+                        if (numxiao1 == 0.0) {
+                            numxiao1 = input.text.toString().toDouble()
+                        } else if (numxiao1 != 0.0) {
+                            numxiao2 = input.text.toString().toDouble()
+                        }
+                    } else {
+                        if (numxiao1 == 0.0) {
+                            numxiao1 = input.text.toString().toDouble()
+                        } else if (numxiao1 != 0.0) {
+                            numxiao2 = input.text.toString().toDouble()
+                        }
+                    }
+                    if (have_xiaoshudian == true) {
+                        input.text = (numxiao1 / numxiao2).toString()
+                    } else {
+                        input.text = (numxiao1 / numxiao2).toString()
+                    }
+                }
 
+                if (have_xiaoshudian == true) {
+                    numxiao1 = input.text.toString().toDouble()
+                } else {
+                    numxiao1 = input.text.toString().toDouble()
+
+                }
             }
         }
     }
