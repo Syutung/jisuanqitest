@@ -1,2 +1,2 @@
-# jisuanqitest
+# 一个简简单单的计算器
 一个android初学者开发的计算器
