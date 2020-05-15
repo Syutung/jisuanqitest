@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity() {
                         gongshi.text=gongshi.text.toString()+numxiao2.toString()
                         gongshi.text = (numxiao1 + numxiao2).toString()
                         numxiao1= gongshi.text.toString().toDouble()
-                        numxiao2=0.0
+                        numxiao2= 0.0
 
                     }
                 }
@@ -308,11 +308,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
         numberdel.setOnClickListener {
+            vibrator.vibrate(madas, -1)
             input.text=""
             gongshi.text=""
             numxiao1=0.0
             numxiao2=0.0
-            vibrator.vibrate(madas, -1)
+
 
         }
 
@@ -325,9 +326,9 @@ class MainActivity : AppCompatActivity() {
                 vibrator.vibrate(madas, -1)
 
                 val t = input.text.toString()
-                gongshi.text = gongshi.text.toString() + t
+                gongshi.text = gongshi.text.toString() +fuhao1.text+ t
 
-                if (fuhao == "+") {
+                if (fuhao1.text == "+") {
                     if (have_xiaoshudian == true) {
                         if (numxiao1 == 0.0) {
                             numxiao1 = input.text.toString().toDouble()
@@ -343,11 +344,11 @@ class MainActivity : AppCompatActivity() {
                     }
                     if (have_xiaoshudian == true) {
 
-                        input.text = (numxiao1 + numxiao2).toString()
+                        gongshi.text = (numxiao1 + numxiao2).toString()
                     } else {
-                        input.text = (numxiao1 + numxiao2).toInt().toString()
+                        gongshi.text = (numxiao1 + numxiao2).toInt().toString()
                     }
-                } else if (fuhao == "-") {
+                } else if (fuhao1.text== "-") {
                     if (have_xiaoshudian == true) {
                         if (numxiao1 == 0.0) {
                             numxiao1 = input.text.toString().toDouble()
@@ -362,11 +363,11 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                     if (have_xiaoshudian == true) {
-                        input.text = (numxiao1 - numxiao2).toString()
+                        gongshi.text = (numxiao1 - numxiao2).toString()
                     } else {
-                        input.text = (numxiao1 - numxiao2).toInt().toString()
+                        gongshi.text = (numxiao1 - numxiao2).toInt().toString()
                     }
-                } else if (fuhao == "×") {
+                } else if (fuhao1.text== "×") {
                     if (have_xiaoshudian == true) {
                         if (numxiao1 == 0.0) {
                             numxiao1 = input.text.toString().toDouble()
@@ -381,9 +382,9 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                     if (have_xiaoshudian == true) {
-                        input.text = (numxiao1 * numxiao2).toString()
+                        gongshi.text = (numxiao1 * numxiao2).toString()
                     } else {
-                        input.text = (numxiao1 * numxiao2).toInt().toString()
+                        gongshi.text = (numxiao1 * numxiao2).toInt().toString()
                     }
                 } else {
                     if (have_xiaoshudian == true) {
@@ -400,16 +401,20 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                     if (have_xiaoshudian == true) {
-                        input.text = (numxiao1 / numxiao2).toString()
+                        gongshi.text = (numxiao1 / numxiao2).toString()
                     } else {
-                        input.text = (numxiao1 / numxiao2).toString()
+                        gongshi.text= (numxiao1 / numxiao2).toString()
                     }
                 }
+                input.text=""
 
                 if (have_xiaoshudian == true) {
-                    numxiao1 = input.text.toString().toDouble()
+                    numxiao1 = gongshi.text.toString().toDouble()
+                    numxiao2 = 0.0
                 } else {
-                    numxiao1 = input.text.toString().toDouble()
+                    numxiao1 = gongshi.text.toString().toDouble()
+                    numxiao2 = 0.0
+
 
                 }
             }
