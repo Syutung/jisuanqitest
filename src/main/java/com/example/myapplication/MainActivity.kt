@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         var fuhao =""
         var have_xiaoshudian=false
         val vibrator = getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
-        val madas = longArrayOf(100,100)
+        val madas = longArrayOf(10,30)
 
         imageView3.setOnClickListener {
             val intant = Intent(this,About::class.java)
@@ -87,6 +87,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         numberxJIA.setOnClickListener {
+            fuhao1.text="+"
             if(input.text.toString()==""){
                 vibrator.vibrate(madas, -1)
 
@@ -97,11 +98,13 @@ class MainActivity : AppCompatActivity() {
                 if (have_xiaoshudian == true) {
                     if (numxiao1 == 0.0) {
                         numxiao1 = input.text.toString().toDouble()
+                        gongshi.text = input.text.toString()
+
                     } else if (numxiao1 != 0.0) {
                         numxiao2 = input.text.toString().toDouble()
                         gongshi.text=gongshi.text.toString()+numxiao2.toString()
-                        input.text = (numxiao1 + numxiao2).toString()
-                        numxiao1=input.text.toString().toDouble()
+                        gongshi.text = (numxiao1 + numxiao2).toString()
+                        numxiao1= gongshi.text.toString().toDouble()
                         numxiao2=0.0
 
                     }
@@ -109,12 +112,13 @@ class MainActivity : AppCompatActivity() {
                 else {
                     if (numxiao1 == 0.0) {
                         numxiao1 = input.text.toString().toDouble()
+                        gongshi.text = input.text.toString()
                     } else if (numxiao1 != 0.0) {
                         numxiao2 = input.text.toString().toDouble()
                         gongshi.text=gongshi.text.toString()+numxiao2.toString()
 
-                        input.text = (numxiao1 + numxiao2).toInt().toString()
-                        numxiao1=input.text.toString().toDouble()
+                        gongshi.text = (numxiao1 + numxiao2).toInt().toString()
+                        numxiao1=gongshi.text.toString().toDouble()
 
                         numxiao2=0.0
 
@@ -122,13 +126,12 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-                fuhao = "+"
-                gongshi.text = input.text.toString()+"+"
                 input.text=""
             }
         }
 
         numberxJIAN.setOnClickListener {
+            fuhao1.text = "-"
             if (input.text.toString() == "") {
                 vibrator.vibrate(madas, -1)
 
@@ -138,27 +141,39 @@ class MainActivity : AppCompatActivity() {
                 if (have_xiaoshudian == true) {
                     if (numxiao1 == 0.0) {
                         numxiao1 = input.text.toString().toDouble()
+                        gongshi.text = input.text.toString()
+
                     } else if (numxiao1 != 0.0) {
                         numxiao2 = input.text.toString().toDouble()
-                    }
+                        gongshi.text = gongshi.text.toString() + numxiao2.toString()
+                        gongshi.text = (numxiao1 - numxiao2).toString()
+                        numxiao1 = gongshi.text.toString().toDouble()
+                        numxiao2 = 0.0
 
+                    }
                 } else {
                     if (numxiao1 == 0.0) {
                         numxiao1 = input.text.toString().toDouble()
+                        gongshi.text = input.text.toString()
                     } else if (numxiao1 != 0.0) {
                         numxiao2 = input.text.toString().toDouble()
+                        gongshi.text = gongshi.text.toString() + numxiao2.toString()
+
+                        gongshi.text = (numxiao1 - numxiao2).toInt().toString()
+                        numxiao1 = gongshi.text.toString().toDouble()
+
+                        numxiao2 = 0.0
+
                     }
 
 
+                    input.text = ""
+
                 }
-
-                fuhao = "-"
-                gongshi.text = input.text.toString() + "-"
-                input.text = ""
-
             }
         }
         numberx.setOnClickListener {
+            fuhao1.text = "×"
             if (input.text.toString() == "") {
                 vibrator.vibrate(madas, -1)
 
@@ -168,28 +183,43 @@ class MainActivity : AppCompatActivity() {
                 if (have_xiaoshudian == true) {
                     if (numxiao1 == 0.0) {
                         numxiao1 = input.text.toString().toDouble()
+                        gongshi.text = input.text.toString()
+
                     } else if (numxiao1 != 0.0) {
                         numxiao2 = input.text.toString().toDouble()
-                    }
+                        gongshi.text = gongshi.text.toString() + numxiao2.toString()
+                        gongshi.text = (numxiao1 * numxiao2).toString()
+                        numxiao1 = gongshi.text.toString().toDouble()
+                        numxiao2 = 0.0
 
+                    }
                 } else {
                     if (numxiao1 == 0.0) {
                         numxiao1 = input.text.toString().toDouble()
+                        gongshi.text = input.text.toString()
                     } else if (numxiao1 != 0.0) {
                         numxiao2 = input.text.toString().toDouble()
+                        gongshi.text = gongshi.text.toString() + numxiao2.toString()
+
+                        gongshi.text = (numxiao1 * numxiao2).toInt().toString()
+                        numxiao1 = gongshi.text.toString().toDouble()
+
+                        numxiao2 = 0.0
+
                     }
 
                 }
 
-                fuhao = "×"
 
-                gongshi.text = input.text.toString() + "×"
+
+
                 input.text = ""
 
             }
         }
 
         numberxchu.setOnClickListener {
+            fuhao1.text = "÷"
             if (input.text.toString() == "") {
                 vibrator.vibrate(madas, -1)
 
@@ -199,23 +229,36 @@ class MainActivity : AppCompatActivity() {
                 if (have_xiaoshudian == true) {
                     if (numxiao1 == 0.0) {
                         numxiao1 = input.text.toString().toDouble()
+                        gongshi.text = input.text.toString()
+
                     } else if (numxiao1 != 0.0) {
                         numxiao2 = input.text.toString().toDouble()
-                    }
+                        gongshi.text = gongshi.text.toString() + numxiao2.toString()
+                        gongshi.text = (numxiao1 / numxiao2).toString()
+                        numxiao1 = gongshi.text.toString().toDouble()
+                        numxiao2 = 0.0
 
+                    }
                 } else {
                     if (numxiao1 == 0.0) {
                         numxiao1 = input.text.toString().toDouble()
+                        gongshi.text = input.text.toString()
                     } else if (numxiao1 != 0.0) {
                         numxiao2 = input.text.toString().toDouble()
+                        gongshi.text = gongshi.text.toString() + numxiao2.toString()
+
+                        gongshi.text = (numxiao1 / numxiao2).toString()
+                        numxiao1 = gongshi.text.toString().toDouble()
+
+                        numxiao2 = 0.0
+
                     }
+                    input.text = ""
 
                 }
 
-                fuhao = "÷"
 
-                gongshi.text = input.text.toString() + "÷"
-                input.text = ""
+
 
             }
         }
