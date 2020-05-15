@@ -117,7 +117,7 @@ class MainActivity : AppCompatActivity() {
                         numxiao2 = input.text.toString().toDouble()
                         gongshi.text=gongshi.text.toString()+numxiao2.toString()
 
-                        gongshi.text = (numxiao1 + numxiao2).toInt().toString()
+                        gongshi.text = (numxiao1 + numxiao2).toString()
                         numxiao1=gongshi.text.toString().toDouble()
 
                         numxiao2=0.0
@@ -159,7 +159,7 @@ class MainActivity : AppCompatActivity() {
                         numxiao2 = input.text.toString().toDouble()
                         gongshi.text = gongshi.text.toString() + numxiao2.toString()
 
-                        gongshi.text = (numxiao1 - numxiao2).toInt().toString()
+                        gongshi.text = (numxiao1 - numxiao2).toString().toString()
                         numxiao1 = gongshi.text.toString().toDouble()
 
                         numxiao2 = 0.0
@@ -201,7 +201,7 @@ class MainActivity : AppCompatActivity() {
                         numxiao2 = input.text.toString().toDouble()
                         gongshi.text = gongshi.text.toString() + numxiao2.toString()
 
-                        gongshi.text = (numxiao1 * numxiao2).toInt().toString()
+                        gongshi.text = (numxiao1 * numxiao2).toString().toString()
                         numxiao1 = gongshi.text.toString().toDouble()
 
                         numxiao2 = 0.0
@@ -346,7 +346,7 @@ class MainActivity : AppCompatActivity() {
 
                         gongshi.text = (numxiao1 + numxiao2).toString()
                     } else {
-                        gongshi.text = (numxiao1 + numxiao2).toInt().toString()
+                        gongshi.text = (numxiao1 + numxiao2).toLong().toString()
                     }
                 } else if (fuhao1.text== "-") {
                     if (have_xiaoshudian == true) {
@@ -365,7 +365,7 @@ class MainActivity : AppCompatActivity() {
                     if (have_xiaoshudian == true) {
                         gongshi.text = (numxiao1 - numxiao2).toString()
                     } else {
-                        gongshi.text = (numxiao1 - numxiao2).toInt().toString()
+                        gongshi.text = (numxiao1 - numxiao2).toLong().toString()
                     }
                 } else if (fuhao1.text== "×") {
                     if (have_xiaoshudian == true) {
@@ -384,7 +384,7 @@ class MainActivity : AppCompatActivity() {
                     if (have_xiaoshudian == true) {
                         gongshi.text = (numxiao1 * numxiao2).toString()
                     } else {
-                        gongshi.text = (numxiao1 * numxiao2).toInt().toString()
+                        gongshi.text = (numxiao1 * numxiao2).toString().toString()
                     }
                 } else {
                     if (have_xiaoshudian == true) {
